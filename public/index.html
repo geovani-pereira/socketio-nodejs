@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Chat Socket.io - Jornada Acadêmica UniAlfa</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <header class="mb-auto">
+
+            <div>
+                <h3 class="float-md-start mb-0">Chat Socket.io - Jornada acadêmica UniAlfa</h3>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div class="container">
+                <h1>Preencha os dados para acessar o chat.</h1>
+            </div>
+
+            <form action="chat">
+                <div class="mb-3">
+                    <label for="input-name" class="form-label">Nome</label>
+                    <input type="text" name="username" class="form-control" id="input-name"
+                        placeholder="Digite seu nome." aria-describedby="nameHelp" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="input-email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="input-email"
+                        placeholder="Digite um email válido." aria-describedby="emailHelp" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="select-rooms" name="select-rooms" class="form-label">Selecione uma sala</label>
+                    <select class="form-select text-center" name="select-rooms" id="select-rooms">
+
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="sala-secreta" class="form-label">Ou crie uma sala</label>
+                    <input type="text" name="room" class="form-control" placeholder="Digite o nome da sala"
+                        id="sala-secreta">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Entrar</button>
+
+            </form>
+
+        </main>
+
+        <footer class="mt-auto text-white-50">
+
+            <p>Geovani Pereira - Jornada Acadêmica <a href="https://www.alfaumuarama.edu.br/fau/"
+                    class="text-white">UniAlfa</a>.</p>
+
+        </footer>
+
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="index.js"></script>
+
+</html>
